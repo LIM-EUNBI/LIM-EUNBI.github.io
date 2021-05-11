@@ -15,9 +15,78 @@
         table {
             border-collapse: collapse;
         }
+
     </style>
 </head>
 <body>
+
+    <!-- HTML5 레이아웃 (기본 구조)
+         header, nav, section, article, aside, footer
+    -->
+    <style>
+        /* css : cascade style sheet 계층형 스타일 표 */
+        header, nav, section, aside, footer {
+            border: 1px dotted black;
+        }
+        header > h1, footer { text-align: center; }
+        nav { display: block; height: 60px;}
+        nav > ul > li {
+            float: left;
+            margin-right: 30px;
+            margin-left: 5px;
+        } 
+        div.contents {
+            /* 내부의 컨텐츠 기준되는 외부 요소에 관계형 포지션 */
+             position: relative; 
+             overflow: hidden;
+             }  
+        section {
+            width: 79%;
+            display: inline-block;
+            text-align: center;
+        }
+        aside {
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            height: 100%;
+            right: 0px;
+        }
+        section > article { 
+            margin: 10px;
+            border: 1px solid skyblue;
+            }
+
+    </style>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</li></a> 
+            <li><a href="#">menu2</li></a> 
+            <li><a href="#">menu3</li></a> 
+        </ul>
+    </nav>
+    <div class="contents">
+        <section>
+            <h1>section</h1>
+            <article>
+                <h1>article1</h1>
+            </article>
+            <article>
+                <h1>article2</h1>
+            </article>
+        </section>
+        <aside>
+            <h1>aside</h1>
+        </aside>
+    </div>
+    <footer>
+        <h1>footer</h1>
+    </footer>
+    <br>
 
     <!-- table 태그 : 테이블 제어 (셀 병합) -->
     <!-- table>(tr>td*5)*3 -->
