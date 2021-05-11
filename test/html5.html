@@ -15,17 +15,8 @@
         table {
             border-collapse: collapse;
         }
-
-    </style>
-</head>
-<body>
-
-    <!-- HTML5 레이아웃 (기본 구조)
-         header, nav, section, article, aside, footer
-    -->
-    <style>
-        /* css : cascade style sheet 계층형 스타일 표 */
-        header, nav, section, aside, footer {
+                /* css : cascade style sheet 계층형 스타일 표 */
+                header, nav, section, aside, footer {
             border: 1px dotted black;
         }
         header > h1, footer { text-align: center; }
@@ -58,33 +49,41 @@
             border: 1px solid skyblue;
             }
 
+
     </style>
+</head>
+<body>
+
+    <!-- HTML5 레이아웃 (기본 구조)
+         header, nav, section, article, aside, footer
+    -->
+
     <header>
         <h1>Header</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="#">menu1</li></a> 
-            <li><a href="#">menu2</li></a> 
-            <li><a href="#">menu3</li></a> 
+            <li><a href="#">menu1</a></li> 
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li> 
         </ul>
     </nav>
     <div class="contents">
         <section>
             <h1>section</h1>
             <article>
-                <h1>article1</h1>
+                <h2>article1</h2>
             </article>
             <article>
-                <h1>article2</h1>
+                <h2>article2</h2>
             </article>
         </section>
         <aside>
-            <h1>aside</h1>
+            <h2>aside</h2>
         </aside>
     </div>
     <footer>
-        <h1>footer</h1>
+        <h2>footer</h2>
     </footer>
     <br>
 
