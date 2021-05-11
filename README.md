@@ -4,12 +4,16 @@
 - HTML은 마크업이 태그로 구성되어있다. <의미있는 태그>.. 등
 
 - http://127.0.0.1:5500(포트8080|5050|6000)등...
+- URL 경로(path) : /루트, /test/html5.html
+
 - pc의 네트워크 내부주소(공통) : 127.0.0.1 == localhost
 - 고유주소 : yahoo.com(도메인) == 74.6.143.25
 - IP주소 버전 : IPv4, IPv6 
 
 - HTML도 버전이 있다. : HTML5, HTML4.01(이전)
 
+- lorem ipsum 영어 URL 주소 : https://loremipsum.io/
+- lorem ipsum 한글 URL 주소 : http://guny.kr/stuff/klorem/#/table-html
 
 
 #### 20210510(월) 작업내역
