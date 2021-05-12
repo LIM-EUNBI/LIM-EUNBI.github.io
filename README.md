@@ -4,7 +4,7 @@
 - git config --local user.name
 - git config --local user.email
 - 프로젝트를 1명이 제작하는 경우가 없기 때문에, 2명이상 일때 소스 수정한 사람 확인용 정보
-
+- 작업내역
 #### 20210511(화) 작업내역
 - 서버(응답하는 프로그램 = response) = 아파치, 톰캣 서버
 - 클라이언트(요청하는 프로그램 = request) = 웹 브라우저
