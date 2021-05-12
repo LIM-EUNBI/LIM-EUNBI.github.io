@@ -1,4 +1,9 @@
-다른곳에서 작업해보았습니다.
+#### 20210512(수) 작업내역
+- git clone으로 프로젝트를 가져온 경우 아래 내용을 추가해 줘야된다.
+- git config --list 확인에서 user.name, user.email 없으면 추가해야된다.
+- git config --local user.name
+- git config --local user.email
+- 프로젝트를 1명이 제작하는 경우가 없기 때문에, 2명이상 일때 소스 수정한 사람 확인용 정보
 
 #### 20210511(화) 작업내역
 - 서버(응답하는 프로그램 = response) = 아파치, 톰캣 서버
