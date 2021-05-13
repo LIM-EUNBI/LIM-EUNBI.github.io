@@ -21,10 +21,11 @@
         // jQuery CDN : contents delivery network 인터넷으로 외부 라이브러리를 가져다 사용
         // jQuery의 기본형식 $시작 문서가 준비되었을 때 자동구현
         // 인터프리터의 단점인 위 -> 아래로 실행되는 순서를 신경쓰지 않아도 된다.
+        // $('id선택자').click(콜백함수=무명함수-자동실행){구현 내용}
         $(document).ready(function(){
             $('#checkValue').click(function(){
                 alert($('#name').val());
-                $('#one').css('background-color', 'red');
+                $('#one').css('background-color', 'pink');
             })
         });
     </script>
@@ -45,7 +46,7 @@
     <div id="one">Hello JavaScript</div>
     <p class="two">헬로 자바스크립트</p>
     <input type="text" name="name" id="name" value="test">
-    <button onclick="checkValue('ㅇㅋㅇㅋ')">입력값 확인</button>
+    <button onclick="checkValue">입력값 확인</button>
     <button id="checkValue">jQuery로 입력값 확인</button>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>

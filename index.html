@@ -18,10 +18,20 @@
         viewport는 반응형(모바일, 태블릿, PC) 홈페이지에서 필수 항목
     -->
     <title>브라우저 제목</title>
+    <!-- jQuery코어 임포트 가져오기 -->
+    <script src="/home/js/jquery-3.6.0.js"></script>
 </head>
     <body>
- 
-</body>
+        <!-- jQuery 기본구조 만들고 홈페이지로 이동시키기 -->
+        <script>
+            $(document).ready(function(){
+                // 루트홈페이지로 접근할 때 replace 함수를 이용해서
+                // 홈페이지로 이동처리
+                location.replace('/home/index.html');
+            });
+
+        </script>
+    </body>
 </html>
 
 
