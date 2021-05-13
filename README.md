@@ -16,6 +16,22 @@
 - 그 이후 유지보수 비용 보통 2천, 리뉴얼 4천만원의 비용이 책정된다.
 - 리뉴얼할 때 덮어씌우는 방식이 아니라 home2022 즉, 새로운 폴더에 작업을 하게된다.
 
+- 픽사베이에서 받은 이미지 3개 : 로고, 슬라이드 이미지, 이미지없음 이미지 총 3개
+- 로고 : https://pixabay.com/ko/vectors/%EC%BB%A4%ED%94%BC-%EC%BB%A4%ED%94%BC-%ED%95%9C%EC%9E%94-%EC%95%84%EC%B9%A8-%EC%8B%9D%EC%82%AC-5009730/
+
+- 슬라이드 : https://pixabay.com/ko/photos/%EC%BB%A4%ED%94%BC-%EC%88%98%EC%B2%A9-%EB%82%98%EB%AC%B4-%EC%98%A4%EB%A0%8C%EC%A7%80-%EC%9D%BC-1276784/
+- https://pixabay.com/ko/illustrations/%EC%BB%A4%ED%94%BC-%EC%BB%A4%ED%94%BC-%EC%BD%A9-%EC%BD%A9-%EC%BB%A4%ED%94%BC%EC%9E%94-1390800/
+
+- 이미지없음 : 
+https://pixabay.com/ko/vectors/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%82%AC%EC%A7%84-%EC%9D%B4%EB%AF%B8%EC%A7%80-1085705/
+
+https://www.freepik.com/free-vector/watercolour-brushstrokes-background_13067993.htm#page=8&query=cute&position=21#position=21&page=8&query=cute
+
+https://www.freepik.com/free-photo/front-view-funny-cute-dog-concept_11524378.htm#page=11&query=cute&position=17#position=17&page=11&query=cute
+
+
+https://www.freepik.com/free-vector/cute-shiba-inu-dog-waving-hand-cartoon_11766652.htm#page=15&query=cute&position=28#position=28&page=15&query=cute
+
 #### 20210512(수) 작업내역
 - git clone으로 프로젝트를 가져온 경우 아래 내용을 추가해 줘야된다.
 - git config --list 확인에서 user.name, user.email 없으면 추가해야된다.

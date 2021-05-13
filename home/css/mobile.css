@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+/* 모바일용 메인페이지 스타일 지정 */
+/* 공통 영역 */
+body { /* a태그는 적용 안됨 */
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    font-family: 'Noto Sans KR', sans-serif;
+    /*important, 다른 css는 적용 안됨, important되어 있는 css적용*/
+    font-size: 16px !important;
+    letter-spacing: -1px !important; /*글자사이 간격*/
+    color: #444 !important;
+    /*줄바꿈할 때 단어단위로 줄바꿈 책 가방(x), 책가방(o)*/    
+    word-wrap: break-word !important; 
+    line-height: 1.2 !important; /* 1이면 16px*/ 
+}
+
+dl, ol, ul { margin-bottom: 0 !important; }
+#container a:hover { color: #000 !important;}
+a:link { color: #444; }
+a:hover { color: #fff !important; }
+a:visited { color: #444; }
+a { text-decoration: none; }
+img { border: none; }
+/* //공통 영역 */
+
+/* 부트스트랩 css 수정 */
+/* 부트스트랩과 네이밍 동일 */
+.txt_right { text-align: right !important; }
+.mt20 { margin-top: 20px !important; }
+.w100p { width: 100% !important; }
+.clear::after {
+    content: '';
+    clear: both; /* 태그의 위치를 지정하는 float:left|right 속성을 초기화, float는 블럭 속성이 없어짐 */
+    display: block; 
+     /* 다시 block속성을 부여*/
+}
+/* // 부트스트랩 css 수정 */
+
+/* header 영역 */
+.on { background-color: #32353d; }
+header {
+    height: 90px;
+    text-align: center;
+    z-index: 200; 
+    /* z-index : z의 순서 (x가로축, y 세로축, z 위쪽 공간)
+       z-index:0은 제일 아래, z-index:1 값이 높을수록 위쪽에 배치 */
+    background: rgba(0,0,0,0.5); /* a는 alpha값 (투명도) */
+    position: absolute; 
+    /* relative 다른태그와 관계(기본값), 위치에서 다른태그에 영향을 받지 않는다.*/
+    left: 0; top: 0;
+    width: 100%;
+}
+.box_inner { width: 100%; margin: 0 auto; }
+/* //header 영역 */
+
+/* 로고 영역 */
+.header_area h1 {
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 3px 0 0; /* 3: 상하, 0: 좌우, 0: 오른쪽*/
+}
+.header_area h1 a {
+    /* 로고뿐만 아니라 글을 넣는 이유는 웹접근성 때문에 추가 
+       스크린리더 : 시각장애인용 유틸리티 때문에 로고와 글이 같이 사용 */
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background: url(../img/logo.png.png) no-repeat; /* css3는 함수를 지원 .1개는 본인폴더, ..2개는 상위폴더*/
+    background-size: 80px 60px !important; /* 가로, 세로*/ 
+    background-position: center center !important; /* 가로, 세로*/
+    text-indent: -9999px; /* 들여쓰기, 이미지만 보이고, 글자는 숨기기*/
+    overflow: hidden;
+}
+/* //로고 영역 */
+
+/* 상단 메뉴 영역 */
+.openMOgnb {
+    /* gnb : global navigation bar 약자 (주로 메뉴 명칭으로 사용) */
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    width: 25px;
+    height: 16px;
+}
+.hdd {
+    text-indent: -9999px;
+    position: absolute;
+}
+.openMOgnb span {
+    box-sizing: border-box; /* 박스 크기를 border의 크기까지 고정*/
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    background: #fff;
+}
+.openMOgnb span + span { width: 17px; } /* 인접 형제 결합자*/
+.openMOgnb span:last-child {
+    width: 25px;
+    margin-bottom: 0px;
+}
+.header_cont {
+    float: none;
+    width: 100%;
+    background: #31353d;
+    display: none;
+    margin-top: 36px;
+}
+.closePop {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.closePop a {
+    display: block;
+    width: 60px; height: 60px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(./img/btn_closeMenu.png) no-repeat;
+    background-size: 60px;
+}
+
+.util { padding: 20px; }
+.header_cont a { color: #fff; font-size: 16px; }
+.util li { float: left; }
+.util li::after {
+    content: '|';
+    display: inline-block;
+    padding: 0 10px;
+    color: #a2a2a3;
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+}
+.util li:last-child::after {
+    /* 가상 선택자 마지막 태그에서 가상요소 추가 */
+    content: '';
+    display: none;
+}
+.gnb {
+    float: none;
+    box-sizing: border-box;
+    padding-top: 0px;
+    height: auto;
+    border-top: 1px solid #83868b;
+}
+.gnb li {
+    float: left;
+    width: 50%;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #83868b;
+}
+.gnb li a {
+    display: block;
+    padding: 0 0 0 65px;
+    height: 60px;
+    line-height: 60px;
+    background: url(./img/ico_gnb01.png) no-repeat 10px center; /* 가로, 세로*/
+    background-size: 49px 56px;
+}
+.gnb_depth { display: none; } /* 서브메뉴 */
+.gnb li + li a { /* 1차메뉴의 li 태그 중 2번째 영역*/
+    background-image: url(../img/ico_gnb02.png);
+}
+.gnb li + li + li a { /* 1차메뉴의 li 태그 중 2번째 영역*/
+    background-image: url(../img/ico_gnb03.png);
+}
+.gnb li + li + li + li a { /* 1차메뉴의 li 태그 중 2번째 영역*/
+    background-image: url(../img/ico_gnb04.png);
+}
+.gnb li:nth-child(2n+1) {
+    /* 2n+1 홀수번째의 li태그를 가르킴*/
+    border-right: 1px solid #83868b;
+}
+/* // 상단 메뉴 영역 */
