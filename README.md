@@ -5,8 +5,23 @@
 - 파싱 : 데이터를 분해해서 화면에 뿌려주는 작업
 - RestAPI서버 주소(빅데이터) : https://coroname.me/getdata
 
-#### 20210514(금) 작업 예정
-- 사용자단 모바일 메인페이지 footer영역 CSS 입히기
+#### 다음주 작업예정
+- 메인페이지에 자바스크립트(jQuery) 적용.
+- 메뉴, 슬라이드 이미지 3개 처리
+- 태블릿 메인 CSS 스타일 , PC용 메인 CSS 스타일 
+- 모바일 서브페이지 CSS
+- 태블릿 + PC용 CSS  
+- 모바일 게시판 페이지(CRUD) CSS
+- 태블릿 + PC용 CSS
+- 모바일 + 태블릿 + PC 댓글 (CSS + 제이쿼리 + 부트스트랩)
+- AdminLTE(부트스트랩 기반 템플릿 - 반응형)를 이용해서 관리자단 디자인 만들기
+- UI디자인 끝
+- UI구현 시작 -> 스프링 프로젝트 시작 (이클립스, 자바 + 오라클 + 스프링)
+- UI구현 -> 위에서 제작한 UI디자인 이용해서 프로그램을 입힌다.
+
+#### 20210514(금) 작업
+- 사용자단 모바일 메인페이지 footer영역 CSS 입히기 O
+- top 상단으로 이동처리 O
 - 과제물 제출 준비
 - 메인페이지에서 자바스크립트(jQuery)적용 - 메뉴, 슬라이드 이미지 처리, top 상단 이동
 
@@ -21,7 +36,7 @@
 - 리뉴얼할 때 덮어씌우는 방식이 아니라 home2022 즉, 새로운 폴더에 작업을 하게된다.
 
 - 픽사베이에서 받은 이미지 3개 : 로고, 슬라이드 이미지, 이미지없음 이미지 총 3개
-- 로고 : https://pixabay.com/ko/vectors/%EC%BB%A4%ED%94%BC-%EC%BB%A4%ED%94%BC-%ED%95%9C%EC%9E%94-%EC%95%84%EC%B9%A8-%EC%8B%9D%EC%82%AC-5009730/
+- 로고 : https://pixabay.com/ko/illustrations/%EB%A7%A4%EB%8B%AC%EB%A0%A4%EB%8A%94-%EA%B3%A0%EC%96%91%EC%9D%B4-%EB%82%99%EC%96%91-%EA%B3%A0%EC%96%91%EC%9D%B4-4794472/
 
 - 슬라이드 : https://pixabay.com/ko/photos/%EC%BB%A4%ED%94%BC-%EC%88%98%EC%B2%A9-%EB%82%98%EB%AC%B4-%EC%98%A4%EB%A0%8C%EC%A7%80-%EC%9D%BC-1276784/
 - https://pixabay.com/ko/illustrations/%EC%BB%A4%ED%94%BC-%EC%BB%A4%ED%94%BC-%EC%BD%A9-%EC%BD%A9-%EC%BB%A4%ED%94%BC%EC%9E%94-1390800/
@@ -31,6 +46,7 @@ https://pixabay.com/ko/vectors/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%82%AC%EC%A7%84-%E
 
 https://www.freepik.com/free-vector/watercolour-brushstrokes-background_13067993.htm#page=8&query=cute&position=21#position=21&page=8&query=cute
 
+- 슬라이드 이미지 : 
 https://www.freepik.com/free-photo/front-view-funny-cute-dog-concept_11524378.htm#page=11&query=cute&position=17#position=17&page=11&query=cute
 
 

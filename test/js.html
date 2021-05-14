@@ -16,6 +16,20 @@
     </style>
     <!-- jQuery 코어 불러(임포트)오기 -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./json.js"></script>
+    <script>
+        // 외부 js파일의 json 데이터를 body > table id에 파싱
+        console.log(jsonData);
+        $(document).ready(function(){
+            for(var i = 0; i < jsonData.length; i++) {
+                $('#board tbody').append('<tr>'); // append는 after과 같은 역할
+                
+                
+                
+                    $('#board tbody').append('</tr>');
+                }
+        });
+    </script>
     <script>
         // jQuery로 개발자가 프로그램을 간편하게 만들기
         // jQuery CDN : contents delivery network 인터넷으로 외부 라이브러리를 가져다 사용
