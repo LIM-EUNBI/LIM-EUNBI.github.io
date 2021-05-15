@@ -22,13 +22,13 @@
         console.log(jsonData);
         $(document).ready(function(){
             for(var i = 0; i < jsonData.length; i++) {
-                $('#board tbody').append('<tr>'); // append는 after과 같은 역할
-                $('#board tbody').append('<td>' + (i + 1) + '</td>');
-                $('#board tbody').append('<td>' + jsonData[i]['_id'] + '</td>');
-                $('#board tbody').append('<td>' + jsonData[i]['age'] + '</td>'); 
-                $('#board tbody').append('<td>' + jsonData[i]['eyeColor'] + '</td>');
-                $('#board tbody').append('<td>' + jsonData[i]['name'] + '</td>');
-                $('#board tbody').append('</tr>');
+                $('#board #tbody').append('<tr>'); // append는 after과 같은 역할
+                $('#board #tbody').append('<td style="text-align:center;">' + (i + 1) + '</td>');
+                $('#board #tbody').append('<td>' + jsonData[i]['_id'] + '</td>');
+                $('#board #tbody').append('<td>' + jsonData[i]['age'] + '</td>'); 
+                $('#board #tbody').append('<td>' + jsonData[i]['eyeColor'] + '</td>');
+                $('#board #tbody').append('<td>' + jsonData[i]['name'] + '</td>');
+                $('#board #tbody').append('</tr>');
                 } 
         });
     </script>
@@ -56,6 +56,7 @@
             <th>age</th>
             <th>eyeColor</th>
             <th>name</th>
+            <tbody id="tbody"></tbody>
         </tr>
     </table>
     <br>
