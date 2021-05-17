@@ -18,19 +18,91 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./json.js"></script>
     <script>
+        $(document).ready(function(){
+            // RestAPI 제공하는 곳 : 공공데이터포털, 네이버(하단에 오픈API), 구글, 인스타그램, 페이스북, 카카오 등등
+            // RestAPI서버에서 받은 빅데이터(코로나 확진자 위치와 발생 일시)를 파싱
+            // $.ajax({}); Asyncronous Javascript and Xml 비동기 자바스크립트와 Xml 통신 
+            // 지금은 Xml 대신에 json 데이터 사용.
+            // http 통신 : 비동기, 동기(기본)
+            // 동기 : 웹프로그램은 기본(옛날에는 동영상 재생시, 100메가 모두 다운로드 후 재생)
+            // 비동기 : 동기는 다중작업이 안됨. 사이트가 먹통처럼 보이는것을 방지. $.ajax 함수로 비동기 데이터(json) 전송을 사용.
+            $.ajax({
+                type:'get', // get(검색), post(보안필요 : 입력, 수정, 삭제)
+                url:'https://coroname.me/getdata', // RestAPI서버의 url 주소
+                dataType:'json', // RestAPI서버로부터 전송받은 데이터 형식
+                success:function(result) {
+                    // var jsonData = JSON.parse(result);
+                    var jsonData = result.data;
+                    console.log(jsonData); // result에는 url에서 dataType 형식으로 받은 자료가 저장
+                    var i = 0;
+                    for(var jsonOne of jsonData) {
+                        $('#board #tbody').append('<tr>');
+                        $('#board #tbody').append('<td style="text-align:center;">' + (i++ + 1) + '</td>');
+                        $('#board #tbody').append('<td style="background-color: lightgreen">' + jsonOne.place + '</td>');
+                        $('#board #tbody').append('<td>' + jsonOne.latlng + '</td>'); 
+                        $('#board #tbody').append('<td>' + jsonOne.createDate + '</td>');
+                        $('#board #tbody').append('<td>' + jsonOne.region + '</td>');
+                        $('#board #tbody').append('</tr>');
+                    }
+                    // 오리지널 for문 (이차원 배열)
+                    for(i = 0; i < jsonData.length; i++) {
+                        if(i == 10) break;
+                        $('#board #tbody').append('<tr>'); // append는 after과 같은 역할
+                        $('#board #tbody').append('<td style="text-align:center;">' + (i + 1) + '</td>');
+                        $('#board #tbody').append('<td style="background-color: #b67f18">' + jsonData[i]['place'] + '</td>');
+                        $('#board #tbody').append('<td>' + jsonData[i]['latlng'] + '</td>'); 
+                        $('#board #tbody').append('<td>' + jsonData[i]['createDate'] + '</td>');
+                        $('#board #tbody').append('<td>' + jsonData[i]['region'] + '</td>');
+                        $('#board #tbody').append('</tr>');
+                    } 
+                },
+                error:function() {
+                    alert('RestAPI서버에 문제가 발생했습니다. 나중에 이용해 주세요.');
+                }
+                
+            });
+        });
         // 외부 js파일의 json 데이터를 body > table id에 파싱
         console.log(jsonData);
         $(document).ready(function(){
+            // 스프링 jsp에서 파싱하는 방법   
+            // 향상된 for 반복문
+            var i = 0;
+            for(var jsonOne of jsonData) {
+                $('#board #tbody').append('<tr>');
+                $('#board #tbody').append('<td style="text-align:center;">' + (i++ + 1) + '</td>');
+                $('#board #tbody').append('<td style="background-color: lightgreen">' + jsonOne._id + '</td>');
+                $('#board #tbody').append('<td>' + jsonOne.age + '</td>'); 
+                $('#board #tbody').append('<td>' + jsonOne.eyeColor + '</td>');
+                $('#board #tbody').append('<td>' + jsonOne.name + '</td>');
+                $('#board #tbody').append('</tr>');
+            }
+            // jQuery에서 파싱하는 방법
+            // $.each(json object, 콜백함수function(index, jsonOne) {});
+            $.each(jsonData, function(index, jsonOne){
+                if(index == 10) return false; // 반복문 중단
+                // 레코드 : 필드들로 구성된 데이터 (_id, age, eyeColor, name)
+                $('#board #tbody').append('<tr>');
+                $('#board #tbody').append('<td style="text-align:center;">' + (index + 1) + '</td>');
+                $('#board #tbody').append('<td style="background-color: skyblue">' + jsonOne._id + '</td>');
+                $('#board #tbody').append('<td>' + jsonOne.age + '</td>'); 
+                $('#board #tbody').append('<td>' + jsonOne.eyeColor + '</td>');
+                $('#board #tbody').append('<td>' + jsonOne.name + '</td>');
+                $('#board #tbody').append('</tr>');
+            });
+            // 오리지널 JS에서 파싱하는 방법
             for(var i = 0; i < jsonData.length; i++) {
-                $('#board #tbody').append('<tr>'); // append는 after과 같은 역할
+                if(i == 10) break; // 반복문 중단
+                $('#board #tbody').append('<tr style="background-color:yellow">'); // append는 after과 같은 역할
                 $('#board #tbody').append('<td style="text-align:center;">' + (i + 1) + '</td>');
-                $('#board #tbody').append('<td>' + jsonData[i]['_id'] + '</td>');
+                $('#board #tbody').append('<td style="background-color: pink">' + jsonData[i]['_id'] + '</td>');
                 $('#board #tbody').append('<td>' + jsonData[i]['age'] + '</td>'); 
                 $('#board #tbody').append('<td>' + jsonData[i]['eyeColor'] + '</td>');
                 $('#board #tbody').append('<td>' + jsonData[i]['name'] + '</td>');
                 $('#board #tbody').append('</tr>');
-                } 
-        });
+            } 
+            });
+            
     </script>
     <script>
         // jQuery로 개발자가 프로그램을 간편하게 만들기
@@ -56,8 +128,8 @@
             <th>age</th>
             <th>eyeColor</th>
             <th>name</th>
-            <tbody id="tbody"></tbody>
         </tr>
+        <tbody id="tbody"></tbody>
     </table>
     <br>
     <div id="one">Hello JavaScript</div>

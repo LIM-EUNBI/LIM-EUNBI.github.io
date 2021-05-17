@@ -156,14 +156,14 @@ header {
     width: 50%;
     text-align: left;
     box-sizing: border-box;
-    border-bottom: 1px solid #83868b;
+    border-bottom: 1px solid #8b8583;
 }
 .gnb li a {
     display: block;
     padding: 0 0 0 65px;
     height: 60px;
     line-height: 60px;
-    background: url(./img/ico_gnb01.png) no-repeat 10px center; /* 가로, 세로*/
+    background: url(../img/ico_gnb01.png) no-repeat 10px center; /* 가로, 세로*/
     background-size: 49px 56px;
 }
 .gnb_depth { display: none; } /* 서브메뉴 */
