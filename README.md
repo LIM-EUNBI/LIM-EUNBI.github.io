@@ -1,8 +1,4 @@
 #### 이번주 작업예정
-- 메인페이지에 자바스크립트(jQuery) 적용.
-- 메뉴, 슬라이드 이미지 3개 처리
-- 보통 이미지 슬라이드 처리는 외부 라이브러리 사용(니보 슬라이드, 캐로셀 슬라이드)
-- 외부 라이브러리 사용 안하고 우리가 만들기
 - 태블릿 메인 CSS 스타일 , PC용 메인 CSS 스타일 
 - 모바일 서브페이지 CSS
 - 태블릿 + PC용 CSS  
@@ -15,18 +11,22 @@
 - UI구현 -> 위에서 제작한 UI디자인 이용해서 프로그램을 입힌다.
 
 #### 20210517(월) 작업
-- jQuery JSON 데이터 파싱
-- 외부 data.js파일에서 json데이터를 저장한 후 html에서 불러와서 파싱
-- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 html에서 불러와서 파싱
+- jQuery JSON 데이터 파싱 (o)
+- 외부 data.js파일에서 json데이터를 저장한 후 html에서 불러와서 파싱 (o)
+- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 html에서 불러와서 파싱 (o)
 - RestAPI서버 중 코로나19 확진자 데이터를 받아서 html에서 파싱
 - 파싱 : 데이터를 분해해서 화면에 뿌려주는 작업
 - RestAPI서버 주소(빅데이터) : https://coroname.me/getdata
 
+- 메인페이지에 자바스크립트(jQuery) 적용. (o)
+- 메뉴, 슬라이드 이미지 3개 처리 (o)
+- 보통 이미지 슬라이드 처리는 외부 라이브러리 사용(니보 슬라이드, 캐로셀 슬라이드)
+- 외부 라이브러리 사용 안하고 우리가 만들기 (o)
 
 #### 20210514(금) 작업
-- 사용자단 모바일 메인페이지 footer영역 CSS 입히기 O
-- top 상단으로 이동처리 O
-- 과제물 제출 준비
+- 사용자단 모바일 메인페이지 footer영역 CSS 입히기 (o)
+- top 상단으로 이동처리 (o)
+- 과제물 제출 (o)
 - 메인페이지에서 자바스크립트(jQuery)적용 - 메뉴, 슬라이드 이미지 처리, top 상단 이동
 
 #### 20210513(목) 작업내역
@@ -42,19 +42,22 @@
 - 픽사베이에서 받은 이미지 3개 : 로고, 슬라이드 이미지, 이미지없음 이미지 총 3개
 - 로고 : https://pixabay.com/ko/illustrations/%EB%A7%A4%EB%8B%AC%EB%A0%A4%EB%8A%94-%EA%B3%A0%EC%96%91%EC%9D%B4-%EB%82%99%EC%96%91-%EA%B3%A0%EC%96%91%EC%9D%B4-4794472/
 
-- 슬라이드 : https://pixabay.com/ko/photos/%EC%BB%A4%ED%94%BC-%EC%88%98%EC%B2%A9-%EB%82%98%EB%AC%B4-%EC%98%A4%EB%A0%8C%EC%A7%80-%EC%9D%BC-1276784/
+- 슬라이드 커피 : https://pixabay.com/ko/photos/%EC%BB%A4%ED%94%BC-%EC%88%98%EC%B2%A9-%EB%82%98%EB%AC%B4-%EC%98%A4%EB%A0%8C%EC%A7%80-%EC%9D%BC-1276784/
+
+- 슬라이드 3
 - https://pixabay.com/ko/illustrations/%EC%BB%A4%ED%94%BC-%EC%BB%A4%ED%94%BC-%EC%BD%A9-%EC%BD%A9-%EC%BB%A4%ED%94%BC%EC%9E%94-1390800/
 
 - 이미지없음 : 
 https://pixabay.com/ko/vectors/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%82%AC%EC%A7%84-%EC%9D%B4%EB%AF%B8%EC%A7%80-1085705/
 
+- 슬라이드 여분
 https://www.freepik.com/free-vector/watercolour-brushstrokes-background_13067993.htm#page=8&query=cute&position=21#position=21&page=8&query=cute
 
-- 슬라이드 이미지 : 
+- 슬라이드 1 
 https://www.freepik.com/free-photo/front-view-funny-cute-dog-concept_11524378.htm#page=11&query=cute&position=17#position=17&page=11&query=cute
 
-
-https://www.freepik.com/free-vector/cute-shiba-inu-dog-waving-hand-cartoon_11766652.htm#page=15&query=cute&position=28#position=28&page=15&query=cute
+- 슬라이드 4
+https://www.freepik.com/free-vector/cartoon-hello-summer-illustration_13722519.htm#page=1&query=summer&position=15#position=15&page=1&query=summer
 
 #### 20210512(수) 작업내역
 - git clone으로 프로젝트를 가져온 경우 아래 내용을 추가해 줘야된다.
