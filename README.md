@@ -13,9 +13,10 @@
 - jQuery 코어 임포트 후 사용자가 지정한 js파일 임포트 해야한다.
 - CSS파일도 reset.css, mobile.css 임포트 이후에 사용자가 지정한 css파일 임포트 해야한다.
 
-- 태블릿 메인 CSS 스타일 , PC용 메인 CSS 스타일 
+- 태블릿 메인 CSS 스타일 , PC용 메인 CSS 스타일 (o)
 - 반응형 페이지의 핵심기술은 미디어쿼리 명령어 사용
 - @media 미디어타입(screen, print 등등 = all) and (min-width: 801px) { 스타일 구현 내용 }
+- PC용 대메뉴 롤오버 이벤트 처리 (o)
 
 #### 20210517(월) 작업
 - jQuery JSON 데이터 파싱 (o)

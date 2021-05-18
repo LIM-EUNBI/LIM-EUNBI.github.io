@@ -25,46 +25,96 @@
 }
 /* PC용 메인페이지 스타일 지정 */
 @media all and (min-width: 1066px) {
-	/* 로고 */
-	.header_area h1 { padding-left: 0px; }
-
-	/* 소메뉴 */
-	.header_cont {
-		width: 769px;
-		padding-right: 10px;
-	}
-
-	/* 대메뉴 */
-	.gnb li a { padding: 26px 40px;}
-	.gnb_depth { /* 2차메뉴 내용 */
-
-	}
 }
 </style>
 <script>
-// 메인 슬라이드 실행 부분을 분리
+// PC용 대메뉴 마우스 롤오버 이벤트 만들기
+// 첫번째 서브메뉴  .gnb_depth2_1 (롤아웃)
+var isOver11 = false;
+// var isOver12 = false;
+function goHide1() {
+	if(!isOver11) {
+		// jQuery는 뒤에서 앞으로 해석된다.
+		$('.gnb_depth2_1').stop().fadeOut('fast');
+		// 대메뉴 중 1번의 2차 gnb_depth2_1 영역
+
+	}
+}
+// 두번째 서브메뉴 .gnb_depth2_2 (롤아웃)
+var isOver21 = false;
+var isOver22 = false;
+function goHide2() {
+	if(!isOver21) {
+		$('.gnb_depth2_2').stop().fadeOut('fast');
+	}
+}
 $(document).ready(function() {
+	// PC용 대메뉴 롤오버 이벤트 처리
+	// 대메뉴 1번의 마우스 오버 이벤트가 발생했을 때 
+	// .gnb_depth2_1 서브메뉴 보이기 
+	$('.openAll1').mouseover(function() {
+		// header태그의 크기가 1055 이상, parseInt는 문자를 숫자로 형변환
+		if(parseInt($('header').css('width')) > 1050) { 
+			$('.gnb_depth2_1').fadeIn('fast');
+		}
+		isOver11 = true;
+	});
+	$('.openAll1').focus(function() {
+		if(parseInt($('header').css('width')) > 1050) { 
+			$('.gnb_depth2_1').fadeIn('fast');
+		}
+		isOver11 = true;
+	});
+	//.gnb_depth2_1 서브메뉴 숨기기
+	$('.openAll1').mouseout(function() {
+		isOver11 = false;
+		setTimeout("goHide1()", 100); // 0.2초 후에 goHide1 함수실행
+	});
+
+	// 대메뉴 2번의 마우스 오버 이벤트가 발생했을 때 
+	// .gnb_depth2_1 서브메뉴 보이기
+	$('.openAll2').mouseover(function() {
+		if(parseInt($('header').css('width')) > 1050) { // header태그의 크기가 1055 이상이라면
+			$('.gnb_depth2_2').fadeIn('fast');
+		}
+		isOver21 = true;
+	});
+
+	$('.openAll2').focus(function() {
+		if(parseInt($('header').css('width')) > 1050) { // header태그의 크기가 1055 이상이라면
+			$('.gnb_depth2_2').fadeIn('fast');
+		}
+		isOver21 = true;
+	});
+	// .gnb_depth2_1 서브메뉴 숨기기
+	$('.openAll2').mouseout(function() {
+		isOver21 = false;
+		setTimeout('goHide2()', 100); // 2초 후에 goHide1 함수실행
+	});
+});
+$(document).ready(function() {
+	// 메인 슬라이드 실행 부분을 분리
 	// 함수 호출(실행)
 	slideAuto = setTimeout("play_w('right')", 3000); // 3초 후에 play_w 실행
-	var slidePlayHide = setTimeout(function(){
-		$(".rollplay").css("display","none");
+	var slidePlayHide = setTimeout(function() {
+		$('.rollplay').css('display','none');
 	}, 3000); // 3초 후에 rollplay클래스 플레이버튼 영역을 숨김
 
-	$('.rollstop').click(function(){
+	$('.rollstop').click(function() {
 		// this : 클릭한 본인 태그
 		$(this).hide(); // 현재 stop버튼을 숨김
-		$(".rollplay").css('display','inline-block');
+		$('.rollplay').css('display','inline-block');
 		if(slideAuto) {clearTimeout(slideAuto)};
 	});
-	$('.rollplay a').click(function(){
+	$('.rollplay a').click(function() {
 		$(this).parent().hide();
 		$('.rollstop').css('display','inline-block');
 		play_w('right');
 	});
-	$('.rollingbtn li.seq a').each(function(index){
+	$('.rollingbtn li.seq a').each(function(index) {
 		$(this).click(function() {
-			$(".rollplay").hide();
-			$(".rollstop").css('display','inline-block');
+			$('.rollplay').hide();
+			$('.rollstop').css('display','inline-block');
 			if(slideAuto) {clearTimeout(slideAuto);}
 			play_w(index);
 		});
@@ -110,7 +160,7 @@ $(document).ready(function() {
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
                                 <li><a href="board_list.html">공지사항</a></li>
-                                <li><a href="board_list.html">겔러리게시판</a></li>
+                                <li><a href="board_list.html">갤러리게시판</a></li>
                             </ul>
                         </div>
 					</li>
@@ -170,7 +220,7 @@ $(document).ready(function() {
 	
 		<!-- 갤러리최근게시물영역 -->
 		<div class="about_area">
-			<h2>겔러리 최근 게시물 <b>TOP 3</b></h2>
+			<h2>갤러리 최근 게시물 <b>TOP 3</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">

@@ -167,7 +167,7 @@ header {
     background-size: 49px 56px;
 }
 .gnb_depth { /* 2차메뉴 (서브메뉴)*/
-     /* display: none;  */
+     display: none; 
 }
 .gnb li + li a { /* 1차메뉴의 li 태그 중 2번째 영역*/
     background-image: url(../img/ico_gnb02.png);

@@ -128,7 +128,7 @@
             line-height: 100px;
             box-sizing: border-box;
             padding-left: 55px;
-            text-align: center;
+            text-align: left;
             background: rgba(0, 0, 0, 0.3) url(../img/ico_kakao.png) no-repeat 10px 50%; /* 위치 : 가로 10px 세로 50%*/
             border: 2px solid #fff;
             color: #fff;
