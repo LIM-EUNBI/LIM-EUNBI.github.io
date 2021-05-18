@@ -70,7 +70,7 @@ header {
     width: 150px;
     height: 80px;
     background: url(../img/cat_logo.png) no-repeat; /* css3는 함수를 지원 .1개는 본인폴더, ..2개는 상위폴더*/
-    background-size: 75px 70px !important; /* 가로, 세로*/ 
+    background-size: 60px 70px !important; /* 가로, 세로*/ 
     background-position: center center !important; /* 가로, 세로*/
     text-indent: -9999px; /* 들여쓰기, 이미지만 보이고, 글자는 숨기기*/
     overflow: hidden;
