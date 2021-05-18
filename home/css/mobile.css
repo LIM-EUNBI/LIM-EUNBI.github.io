@@ -166,7 +166,9 @@ header {
     background: url(../img/ico_gnb01.png) no-repeat 10px center; /* 가로, 세로*/
     background-size: 49px 56px;
 }
-.gnb_depth { display: none; } /* 서브메뉴 */
+.gnb_depth { /* 2차메뉴 (서브메뉴)*/
+     /* display: none;  */
+}
 .gnb li + li a { /* 1차메뉴의 li 태그 중 2번째 영역*/
     background-image: url(../img/ico_gnb02.png);
 }
@@ -320,7 +322,10 @@ li.imglist2 {
 /* // 본문 컨테이너 영역 */
 
 /* footer 영역 */
-footer { border-top: 1px solid #ddd; }
+footer { 
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
 .foot_area { /* 태블릿, PC에서 적용되는 css */
 	box-sizing: border-box;
 	padding: 0 20px 90px;

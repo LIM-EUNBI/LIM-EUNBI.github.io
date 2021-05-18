@@ -17,11 +17,28 @@
 	 <!-- 사용자 정의형 css, script 추가 -->
      <link rel="stylesheet" href="/home/css/mobile.css">
 	 <link rel="stylesheet" href="/home/css/tablet.css">
+	 <link rel="stylesheet" href="/home/css/pc.css">
 	 <script src="/home/js/main.js"></script>
 	 <script src="/home/js/slidemain.js"></script> <!-- 메인 슬라이드 코어 임포트 -->
 <style>
 @media all and (min-width: 801px) {
+}
+/* PC용 메인페이지 스타일 지정 */
+@media all and (min-width: 1066px) {
+	/* 로고 */
+	.header_area h1 { padding-left: 0px; }
 
+	/* 소메뉴 */
+	.header_cont {
+		width: 769px;
+		padding-right: 10px;
+	}
+
+	/* 대메뉴 */
+	.gnb li a { padding: 26px 40px;}
+	.gnb_depth { /* 2차메뉴 내용 */
+
+	}
 }
 </style>
 <script>

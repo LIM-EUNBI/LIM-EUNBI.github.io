@@ -128,12 +128,13 @@
             line-height: 100px;
             box-sizing: border-box;
             padding-left: 55px;
-            text-align: left;
+            text-align: center;
             background: rgba(0, 0, 0, 0.3) url(../img/ico_kakao.png) no-repeat 10px 50%; /* 위치 : 가로 10px 세로 50%*/
             border: 2px solid #fff;
             color: #fff;
             vertical-align: middle; /* 이미지와 글을 배치할때 글을 가르킴(세로 가운데 정렬) */ 
             margin-right: 10px;
+            
         }
         .app_line a + a {
             margin-right: 0;
@@ -160,4 +161,25 @@
             text-overflow: ellipsis; /* 문자열이 영역을 벗어났을 때, ...표시하는 기능*/
             white-space: nowrap;
         }
+
+    /* footer 영역 */
+	footer { padding: inherit; }
+	.foot_area {
+		padding-left: 20px;
+		padding-bottom: 0px;
+	}
+	.addr {
+		font-size: 13px;
+		line-height: 1.4;
+	}
+	.br_line { display: inherit; }
+	.snslink { 
+		position: absolute; 
+		right: 20px;
+		top: 20px;
+		width: auto;
+		margin: inherit;
+	}
+	.snslink li { margin-left: 15px; }
+	/* .quick_list { display: none;} */
 }
