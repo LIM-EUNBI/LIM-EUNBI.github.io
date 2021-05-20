@@ -2,6 +2,8 @@
 - 모바일 서브페이지 CSS
 - 태블릿 + PC용 CSS  
 - 모바일 게시판 페이지(CRUD) CSS
+- Read - 리스트 형식 list.html
+-      - Map형식, Json 데이터 형식(key:value) : board_view.html
 - 태블릿 + PC용 CSS
 - 모바일 + 태블릿 + PC 댓글 (CSS + 제이쿼리 + 부트스트랩)
 - AdminLTE(부트스트랩 기반 템플릿 - 반응형)를 이용해서 관리자단 디자인 만들기
@@ -9,11 +11,32 @@
 - UI구현 시작 -> 스프링 프로젝트 시작 (이클립스(전자정부표준프레임워크의 개발환경), 자바 + 오라클 + 스프링)
 - UI구현 -> 위에서 제작한 UI디자인 이용해서 프로그램을 입힌다.
 
+#### 작업 환경
+- 전자정부 표준프레임워크 개발업체 : 삼성SDS, LG CNS, SK C&C
+- egov: 자바 기반 => JDK(Java Delvelopement Kit 자바개바로한경)설치 확인
+- JDK path 설정
+- cmd에 java -version / 
+- 자바는 8버전부터 비용이 발생이 되어 오픈 JDK 사용
+- 톰캣 : 이클립스에서 웹프로그램 결과를 확인하는 라이브 서버.(localhost:8080)
+- 라이브서버(아파치) : VS Code에서 HTML 결과를 확인하는 라이브 서버.(localhost:5500)
+
+#### 20210521(금) 작업예정
+- 모바일 게시판페이지(CRUD) CSS - Create(Update) = board_write.html
+- 반응형 서브페이지(로그인, 회원가입, 마이페이지)
+- 이클립스 헬로월드 실습
+
+
 #### 20210520(목) 작업
-- 모바일 게시판페이지 CSS
+- 모바일, 태블릿, PC 게시판페이지 CSS (o)
+- 모바일 게시판 뷰 CSS (o)
+
 - href(헤르프) : Hypertext reference (웹문서 참조)
 - 정적(static) 콘텐츠 : HTML, CSS, js
 - 동적(dynamic) 콘텐츠 : jsp(java 스프링), python(파이썬 장고), PHP, C#(닷넷), Nodejs(익스프레스)
+- 바인딩 : 정적인 컨텐츠에 동적인 데이터를 넣어주는 것
+- 게시물 타이틀 문자 넘치는 부분은 CSS 처리. (추후 jsp 프로그램으로 처리예정)
+- jre : Java Runtime Environment(자바실행환경) - 실행할때만 사용.(따로 설정 안해줘도 된다.)
+- jdk : 개발하고 실행할 때
 
 
 
