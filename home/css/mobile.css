@@ -6,7 +6,7 @@
 /* 공통 영역 */
 body { /* a태그는 적용 안됨 */
     /* font-family: 'Nanum Gothic', sans-serif; */
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif !important;
     /*important, 다른 css는 적용 안됨, important되어 있는 css적용*/
     font-size: 16px !important;
     letter-spacing: -1px !important; /*글자사이 간격*/

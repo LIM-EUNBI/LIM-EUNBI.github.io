@@ -2,35 +2,45 @@
 - 모바일 서브페이지 CSS
 - 태블릿 + PC용 CSS  
 - 모바일 게시판 페이지(CRUD) CSS
-- Read - 리스트 형식 list.html
--      - Map형식, Json 데이터 형식(key:value) : board_view.html
+- Read - 리스트 형식 list.html,
+-        Map형식, Json 데이터 형식(key:value) : board_view.html
 - 태블릿 + PC용 CSS
 - 모바일 + 태블릿 + PC 댓글 (CSS + 제이쿼리 + 부트스트랩)
 - AdminLTE(부트스트랩 기반 템플릿 - 반응형)를 이용해서 관리자단 디자인 만들기
 - UI디자인 끝
 - UI구현 시작 -> 스프링 프로젝트 시작 (이클립스(전자정부표준프레임워크의 개발환경), 자바 + 오라클 + 스프링)
 - UI구현 -> 위에서 제작한 UI디자인 이용해서 프로그램을 입힌다.
+- 스프랑 (MVC)웹 프로젝트 만들예정. 2달간 진행
+- 위 스프링 프로젝트에서 자바 기초도 실습예정 -> htmlUI 만들것을 jsp 변경작업 
+
 
 #### 작업 환경
 - 전자정부 표준프레임워크 개발업체 : 삼성SDS, LG CNS, SK C&C
 - egov: 자바 기반 => JDK(Java Delvelopement Kit 자바개바로한경)설치 확인
 - JDK path 설정
-- cmd에 java -version / 
+- cmd에 java -version 
 - 자바는 8버전부터 비용이 발생이 되어 오픈 JDK 사용
-- 톰캣 : 이클립스에서 웹프로그램 결과를 확인하는 라이브 서버.(localhost:8080)
 - 라이브서버(아파치) : VS Code에서 HTML 결과를 확인하는 라이브 서버.(localhost:5500)
+- 톰캣(jsp 해석) : 이클립스에서 웹프로그램 결과를 확인하는 라이브 서버.(localhost:8080)
+- ㄴ> 자바소스(.java(앱), .jsp(웹)) -> 컴파일(라인단위X-인터프리터X) -> 
+class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣) -> 크롬(IE) 화면에 렌더링 결과
+
+- netstat -a -o 사용중인 모든 포트 찾기
+- netstat -nao | findstr 0000 특정 포트 찾기
+- control + shift + Esc(작업 관리자) - 세부 정보에서 PID 번호로 확인
 
 #### 20210521(금) 작업예정
 - 모바일 게시판페이지(CRUD) CSS - Create(Update) = board_write.html
 - 반응형 서브페이지(로그인, 회원가입, 마이페이지)
-- 이클립스 헬로월드 실습
 
 - 글쓰기(부트스트랩) : 첨부파일 부분, 내용입력 부분 웹 에디터 추가.
 - 부트스트랩(adminLTE) : 제이쿼리 기반의 UI 템플릿(프레임워크)
 - AdminLTE : dist(디스트리뷰트 - 배포), pages(더미데이터), plugins(서머노트 등..의 확장프로그램)
 - 대시보드파일 : index.html, index2.html, index3.html
 - board_write.html 파일에 bootstrap 코어 적용 + 서머노트 plugin 임포트
-
+- board_view.html 댓글 UI디자인(부트스트랩) 추가
+- 관리자단 AdminLTE 적용(회원관리CRUD, 게시판CRUD, 대시보드)
+- 이클립스 헬로월드 실습 (다이나믹 웹프로젝트(jsp) 만든 후 사용자단 UI 실행 후 삭제)
 
 #### 20210520(목) 작업
 - 모바일, 태블릿, PC 게시판페이지 CSS (o)
