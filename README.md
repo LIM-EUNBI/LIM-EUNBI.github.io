@@ -25,10 +25,16 @@
 - 반응형 서브페이지(로그인, 회원가입, 마이페이지)
 - 이클립스 헬로월드 실습
 
+- 글쓰기(부트스트랩) : 첨부파일 부분, 내용입력 부분 웹 에디터 추가.
+- 부트스트랩(adminLTE) : 제이쿼리 기반의 UI 템플릿(프레임워크)
+- AdminLTE : dist(디스트리뷰트 - 배포), pages(더미데이터), plugins(서머노트 등..의 확장프로그램)
+- 대시보드파일 : index.html, index2.html, index3.html
+- board_write.html 파일에 bootstrap 코어 적용 + 서머노트 plugin 임포트
+
 
 #### 20210520(목) 작업
 - 모바일, 태블릿, PC 게시판페이지 CSS (o)
-- 모바일 게시판 뷰 CSS (o)
+- 모바일, 태블릿, PC 게시판 뷰 CSS (o)
 
 - href(헤르프) : Hypertext reference (웹문서 참조)
 - 정적(static) 콘텐츠 : HTML, CSS, js
