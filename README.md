@@ -38,6 +38,8 @@ class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣)
 - col-6(화면 가로크기를 50%로 지정)
 
 - 팝업창 : 모달창(modal(필수창) : 작업 후 다음으로 가능), 모달리스창(modalless : 작업하고 상관없이 다음창으로 이동 가능)
+- collapse : 부트스트랩4
+
 
 #### 이클립스
 
@@ -46,7 +48,7 @@ class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣)
 - board_view.htl 댓글 AdminLTE3이 페이징 UI 추가
 - 반응형 서브페이지들(로그인, 회원가입, 마이페이지)
 - 관리자단 AdminLTE적용.(회원가입CRUD, 게시판CRUD, 대시보드)
-
+- css : 계층 : 조부 > 부> 본인(timeline) > 자식(collapse) > 손자(time-label) > 증손자
 #### 20210524(월) 작업
 - board_view.html 댓글 UI디자인(부트스트랩) 추가
 - 반응형 서브페이지(로그인, 회원가입, 마이페이지)
@@ -55,7 +57,7 @@ class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣)
 - 시간 형식 : date(년월일), dateTime(년월일시분초), timestamp(년월일시분초)
 - timestamp는 1970년 1월 1일 부터 현재까지의 초를 계산한 결과값
 
-- 
+
 
 #### 20210521(금) 작업
 - 모바일 게시판페이지(CRUD) CSS - Create(Update) = board_write.html
