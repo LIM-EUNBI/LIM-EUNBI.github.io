@@ -150,7 +150,7 @@ $(document).ready(function() {
 				<div class="col-md-12">
 					<!-- 댓글 입력폼 -->
 					<div class="card-default" style="text-align: left;">
-						<div class="card-header">
+						<div class="card-header bg-olive">
 						  <h3 class="card-title">댓글쓰기</h3>
 						</div>
 						<div class="card-body p-0">
@@ -187,8 +187,10 @@ $(document).ready(function() {
 				<div class="timeline" >
 					<!-- timeline time label -->
 					<div class="time-label">
-					<span class="">댓글 리스트[<span>1</span>]</span>
+						<span class="" data-toggle="collapse" href="#collapseReply" role="button" id="btn_reply_list">댓글 리스트[<span>1</span>]</span>
 					</div>
+					<!-- 콜랩스 시작 -->
+				<div class="collapse timeline" id="collapseReply">
 			<!-- /.timeline-label -->
 			<!-- timeline item -->
 			<!-- 댓글리스트를 자바스크립트의 빵틀(템플릿) 만들기 -->
@@ -208,8 +210,41 @@ $(document).ready(function() {
 				</div>
 			{{/each}}
 			</script>
-				<!-- END timeline item -->
+
+				<!-- 페이징 처리 -->
+				<div class="row" >
+					<ul class="pagination" style="margin: 0 auto;">
+						<!-- <li class="paginate_button page-item previous disabled" id="example2_previous">
+							<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+						</li>
+						<li class="paginate_button page-item active">
+							<a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+						</li>
+						<li class="paginate_button page-item ">
+							<a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+						</li>
+						<li class="paginate_button page-item ">
+							<a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+						</li>
+						<li class="paginate_button page-item ">
+							<a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+						</li>
+						<li class="paginate_button page-item ">
+							<a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a>
+						</li>
+						<li class="paginate_button page-item ">
+							<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a>
+						</li>
+						<li class="paginate_button page-item next" id="example2_next">
+							<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+						</li> -->
+					</ul>
+					<!-- 페이징 처리 끝 -->
+				</div>
+				<!-- 콜랩스 끝 -->
 			</div>
+			<!-- timeline 끝 -->
+		</div>
 			<p class="btn_line txt_right">
 				<a href="board_list.html" class="btn_bbs">목록</a>
 			</p>
@@ -276,13 +311,62 @@ $(document).ready(function() {
   </div>
   <!-- /.modal -->
 <script>
+// 페이징 처리 함수형 변수
+// 페이징처리 함수형 변수(아래)
+var printPagingList = function(pageVO, target) {
+	$(target).html('');// tartget 의 내용만 지우고, target은 남아있음.
+//pageVO = 스프링에서 받은 json데이터, 변수3개 pageVO.prev(이전데이터가 있다면 true), pageVO.next(다음데이터 있다면 true), pageVO=5페이지로 가정
+	var pagination = '';//문자열 누적변수
+	//Previous 출력(아래)
+	pagination += '<li class="paginate_button page-item previous disabled" id="example2_previous">';
+	pagination += '<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
+	pagination += '</li>';//pagination = pagination + '</li>';//여기 Previous
+	var active = '';
+	for(var i=0; i<pageVO; i++) {
+		if(i==0) { active = 'active'; } else { active = ''; }
+		pagination += '<li class="paginate_button page-item '+active+'">';
+		pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>';
+		pagination += '</li>';
+	}
+	//Next 출력(아래)
+	pagination += '<li class="paginate_button page-item next" id="example2_next">';
+	pagination += '<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
+	pagination += '</li>';
+	$(target).append(pagination);
+};
+
+// 댓글 리스트 처리 함수형 변수(아래)
 var printReplyList = function(data, templateData, target) {
 	var template = Handlebars.compile(templateData.html()); // 탬플릿을 태그로 변환
 	var html = template(data); // 파싱처리
 	$('.div_template').remove(); // 기존 댓글데이터 누적을 방지
-	target.after(html);
+	target.prepend(html);
 }
 	$(document).ready(function() {
+		$('#btn_reply_list').click(function() {
+			$.ajax({
+				method: 'get',
+				url: './board_view.html', // RestAPI 경로 입력
+				dataType: 'text',
+				success: function(result) {
+					// alert('ReatAPI성공');
+					result = [
+						{rno:3, bno:2, reply_text:'세번째 댓글입니다.', replyer:'관리자', regdate:1601234512345},
+						{rno:2, bno:2, reply_text:'두번째 댓글입니다.', replyer:'관리자', regdate:1601234512345}
+					];
+					// 자바스크립트는 함수기반 구조화된 언어
+					// 위 result 데이터를 #template에 바인딩 시키는 함수
+					// 함수의 (인자=아규먼트=매개변수=파라미터)
+					// (jsonData, 바인딩(파싱)위치, 화면출력위치);
+					printReplyList(result, $('#template'), $('#collapseReply'));
+					printPagingList(5, '.pagination');
+				},
+				error: function() {
+					alert('ReatAPI 서버가 작동하지 않습니다.');
+				}
+			});
+			
+		});
 		$('#btn_reply_write').click(function() {
 			// alert('댓글 등록');
 			$.ajax({
@@ -292,6 +376,7 @@ var printReplyList = function(data, templateData, target) {
 				success: function(result) {
 					// alert('ReatAPI성공');
 					result = [
+						{rno:3, bno:2, reply_text:'세번째 댓글입니다.', replyer:'관리자', regdate:1601234512345},
 						{rno:2, bno:2, reply_text:'두번째 댓글입니다.', replyer:'관리자', regdate:1601234512345},
 						{rno:1, bno:2, reply_text:'첫번째 댓글입니다.', replyer:'관리자', regdate:1601234512345}
 					];
@@ -299,7 +384,8 @@ var printReplyList = function(data, templateData, target) {
 					// 위 result 데이터를 #template에 바인딩 시키는 함수
 					// 함수의 (인자=아규먼트=매개변수=파라미터)
 					// (jsonData, 바인딩(파싱)위치, 화면출력위치);
-					printReplyList(result, $('#template'), $('.time-label'));
+					printReplyList(result, $('#template'), $('#collapseReply'));
+					printPagingList(5, '.pagination');
 				},
 				error: function() {
 					alert('ReatAPI 서버가 작동하지 않습니다.');
@@ -315,7 +401,6 @@ $(document).ready(function() {
 		$('#rno').val($(this).attr('data-rno'));
 		$('#modal_reply_text').val($(this).find('.timeline-body').text());
 		$('.modal-title').html($(this).find('.timeline-header').text());
-
 	});
 });
 </script>

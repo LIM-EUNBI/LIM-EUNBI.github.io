@@ -364,11 +364,16 @@ input:-ms-input-placeholder {
 	}
 	.app_list .app_content {
 		width: 89%;
-		float:right;
+		float: right;
+		/* float: none; */
 		border: 1px solid #ccc;
+		
 	}
 	.btn_line {text-align: center;}
 	.appForm textarea {height: 230px;} 
 	/* //태블릿+PC 글쓰기 폼 */
+	/* .pilsoo_item {
+		text-align: center;
+	} */
 	}
 	/* PC용 메인페이지 스타일 지정 */
