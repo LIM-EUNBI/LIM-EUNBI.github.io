@@ -36,12 +36,16 @@ class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣)
 #### 이클립스
 
 #### 20210528(금) 작업
-- 관리자단 admin/board_write.html, board_view.html
+- 관리자단 admin/board_write.html, board_view.html, 댓글 (O)
 - 대시보드 home.html (최근 회원가입 정보, 최근 게시물 정보)
 - 관리자단 AdminLTE적용 - 스프링시간 | UI디자인 시간 선택 후 아래 작업진행 예정
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin, home, root 파일까지)로 배치
 - 스프링 작업의 시작
 
+- 뒤로가기 허용하면 게시물 테러가 가능.
+- 뒤로가기 허용하지 않게 페이지를 이동하는 방식(JS에서는 location.replace)
+- 뒤로가기 허용하는 방식(JS에서는 location.href='')
+- 데이터를 전송할 때 사용문장 = 쿼리스트링(QueryString) : ?키=값&키=값
 
 #### 20210527(목) 작업
 - 관리자단 AdminLTE적용.(회원가입CRUD(스프링), 게시판 생성관리(스프링), 게시판CRUD, 대시보드)
