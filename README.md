@@ -12,7 +12,7 @@
 - JDK path 설정
 - cmd에 java -version 
 - 자바는 8버전부터 비용이 발생이 되어 오픈 JDK 사용
-- 라이브서버(아파치) : VS Code에서 H TML 결과를 확인하는 라이브 서버.(localhost:5500)
+- 라이브서버(아파치) : VS Code에서 HTML 결과를 확인하는 라이브 서버.(localhost:5500)
 - 톰캣(jsp 해석) : 이클립스에서 웹프로그램 결과를 확인하는 라이브 서버.(localhost:8080)
 - ㄴ> 자바소스(.java(앱), .jsp(웹)) -> 컴파일(라인단위X-인터프리터X) -> 
 class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣) -> 크롬(IE) 화면에 렌더링 결과
