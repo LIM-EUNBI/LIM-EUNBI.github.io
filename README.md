@@ -35,6 +35,9 @@ class 파일(DB자료가 동적으로 입출력 됨) -> html 번역 (WAS-톰캣)
 
 #### 이클립스
 
+#### 20210531(월) 작업
+- ERD기준으로 게시판UI 수정
+
 #### 20210528(금) 작업
 - 관리자단 admin/board_write.html, board_view.html, 댓글 (O)
 - 대시보드 home.html (최근 회원가입 정보, 최근 게시물 정보)
