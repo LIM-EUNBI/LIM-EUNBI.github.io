@@ -172,25 +172,33 @@
             <form name="form_write" action="board_write.html" enctype="multipart/form-data">
               <div class="card-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <label for="board_type">게시판 타입</label>
+                  <select name="board_type" class="form-control">
+                    <option>선택</option>
+                    <option>공지사항</option>
+                    <option>갤러리</option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                  <label for="title">제목</label>
+                  <input name="title" type="text" class="form-control" id="title" placeholder="제목을 입력해주세요." required>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label for="content">글내용</label>
+                  <textarea name="content" id="content" class="form-control" placeholder="내용을 입력해주세요." required></textarea>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputFile">File input</label>
+                  <label for="writer">작성자</label>
+                  <input name="writer" type="text" class="form-control" id="writer" placeholder="작성자를 입력해주세요." required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">첨부파일</label>
                   <div class="input-group">
                     <div class="custom-file">
                       <input name="file" type="file" class="custom-file-input" id="exampleInputFile">
                       <label class="custom-file-label" for="exampleInputFile">파일 선택</label>
                     </div>
                   </div>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -247,5 +255,37 @@
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes 오른쪽메뉴-로그아웃사용 코어: 사용안함. -->
 <!-- <script src="dist/js/demo.js"></script> -->
+<!-- 첨부파일 부트스트랩 js 코어 -->
+<script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>    
+<script>
+  $(document).ready(function() {
+      bsCustomFileInput.init();
+  });
+</script>
+<!-- 서머노트 웹 에디터 실행 -->
+<script>
+  $(document).ready(function() {
+      // $('#content_lbl').summernote({  }); 기본실행. 기본실행을 개발자가 커스터마이징 
+      $('#content').summernote({
+          height: 200,
+          lang: 'ko-kR',
+          placeholder: '글 내용을 입력해 주세요.',            
+          toolbar: [
+              ['fontname', ['fontname']],
+              ['fontsize', ['fontsize']],
+              ['style',['bold','italic','underline']],
+              ['color',['forecolor','color']],
+              ['table',['table']],
+              ['para',['ul','ol','paragraph']],
+              ['height',['height']],
+              ['insert',['link','video']],
+              ['view', ['fullscreen','help']]
+          ],
+          fontNames: ['Arial', 'Arial Black', 'Nanum Gothic', '맑은 고딕', '궁서', '굴림', '1훈떡볶이', 'Noto Sans KR'],
+          fontSizes: ['8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30'],
+          fontNamesIgnoreCheck: ['Noto Sans KR']
+      });
+  });
+</script>
 </body>
 </html>
