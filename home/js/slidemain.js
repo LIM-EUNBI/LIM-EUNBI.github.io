@@ -24,18 +24,18 @@ function play_w(directw) { // 좌우로 슬라이드되는 함수 선언
 	// slideNum 조건 실행 -> 아래 3가지 중 1가지는 항상 실행됨
 	if(slideNum == 0) {
 		// 슬라이드 인덱스가 0번일 때 li태그를 1초간 서서히 사라지게(투명도 0) 처리
-		$('.viewImgList li.imglist1').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist2').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist0').animate({'opacity': 1}, 2000);
+		$('.viewImgList li.imglist1').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist2').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist0').animate({'opacity': 1}, 3000);
 	} else if(slideNum == 1) {
-		$('.viewImgList li.imglist0').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist2').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist1').animate({'opacity': 1}, 2000);
+		$('.viewImgList li.imglist0').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist2').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist1').animate({'opacity': 1}, 3000);
 
 	} else if(slideNum == 2) {
-		$('.viewImgList li.imglist0').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist1').animate({'opacity': 0}, 2000);
-		$('.viewImgList li.imglist2').animate({'opacity': 1}, 2000);
+		$('.viewImgList li.imglist0').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist1').animate({'opacity': 0}, 3000);
+		$('.viewImgList li.imglist2').animate({'opacity': 1}, 3000);
 	}
 	if(slideAuto) { // true일 때 자동 슬라이드, false일 때 멈춤
 		clearTimeout(slideAuto); // play_w 함수를 실행 중지
